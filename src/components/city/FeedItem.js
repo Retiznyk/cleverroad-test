@@ -7,11 +7,12 @@ import { metrics, colors } from "../../themes";
 
 export default ({ feed, style: containerStyle }) => (
   <View style={containerStyle}>
-    <View style={style.row}>
-      <View style={[style.avatar, style.item]}>
+    <View style={style.container}>
+      <View style={style.item}>
         <Avatar source={{ uri: feed.avatar }} small rounded />
         <Text style={style.time}>{feed.date}</Text>
       </View>
+      <View style={style.spacerDouble} />
       <View style={style.message}>
         <View style={[style.senderContainer, style.item]}>
           <Text style={style.sender}>{feed.full_name}</Text>
@@ -53,6 +54,7 @@ export default ({ feed, style: containerStyle }) => (
     <View style={style.replies}>
       <FlatList
         data={feed.replies}
+        keyExtractor={item => item.id.toString()}
         renderItem={({ item }) => <Reply reply={item} />}
       />
     </View>
@@ -60,13 +62,19 @@ export default ({ feed, style: containerStyle }) => (
 );
 
 const style = StyleSheet.create({
+  container: {
+    flexDirection: "row",
+    backgroundColor: "white",
+    borderRadius: metrics.base,
+    padding: metrics.base
+  },
   row: {
     flexDirection: "row"
   },
   image: {
     height: 150,
     width: "100%",
-    borderRadius: 15
+    borderRadius: metrics.base
   },
   message: {
     flex: 1
@@ -80,10 +88,7 @@ const style = StyleSheet.create({
     fontSize: 12
   },
   item: {
-    marginVertical: 5
-  },
-  avatar: {
-    margin: metrics.base
+    marginVertical: metrics.small
   },
   status: {
     flexDirection: "row",
@@ -97,11 +102,17 @@ const style = StyleSheet.create({
     opacity: 0.5
   },
   spacer: {
-    width: 5
+    width: metrics.small
+  },
+  spacerDouble: {
+    width: metrics.base
   },
   time: {
     textAlign: "center",
-    color: "gray",
-    marginVertical: 5
+    color: colors.gray,
+    marginVertical: metrics.small
+  },
+  replies: {
+    marginTop: metrics.small
   }
 });

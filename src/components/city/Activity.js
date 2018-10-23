@@ -20,7 +20,7 @@ const style = StyleSheet.create({
   container: {
     height: 185,
     width: 185,
-    borderRadius: 15,
+    borderRadius: metrics.base,
     overflow: "hidden"
   },
   spacer: {
@@ -30,7 +30,7 @@ const style = StyleSheet.create({
     color: "white",
     fontSize: 20,
     fontWeight: "bold",
-    marginVertical: 5
+    marginVertical: metrics.small
   },
   tickets: {
     color: "white",
@@ -38,7 +38,7 @@ const style = StyleSheet.create({
   },
   getIt: {
     backgroundColor: "white",
-    padding: 5,
+    padding: metrics.small,
     borderRadius: 14,
     width: 100,
     alignSelf: "flex-end"

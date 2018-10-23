@@ -1,20 +1,24 @@
 [
   {
+    "id": 1,
     "image": "https://dta0yqvfnusiq.cloudfront.net/forge85944124/2018/05/party-5afeb203ba5c5.jpg",
     "name": "Some party",
     "tickets": 3
   },
   {
+    "id": 2,
     "image": "https://edm.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_768/MTU1ODk1NTk3NTE2MjY5Mjk2/254a1e0a-2016-0529-tampa-raymondjamesstadium-sunsetmusicfestival-alexperez-processed-144-1500x1000.jpg",
     "name": "Festival #1",
     "tickets": 1
   },
   {
+    "id": 3,
     "image": "https://www.chepstow-racecourse.co.uk/images/upload/xmas-party-50-50.jpg",
     "name": "Another party",
     "tickets": 5
   },
   {
+    "id": 4,
     "image": "https://media.timeout.com/images/101570805/630/472/image.jpg",
     "name": "Festival #2",
     "tickets": 3

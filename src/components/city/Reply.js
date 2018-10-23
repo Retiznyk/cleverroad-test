@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { Avatar } from "react-native-elements";
-import { metrics } from "../../themes";
+import { metrics, colors } from "../../themes";
 
 export default ({ reply }) => (
   <View style={style.container}>
@@ -17,10 +17,10 @@ const style = StyleSheet.create({
     flexDirection: "row"
   },
   comment: {
-    marginHorizontal: 5,
+    marginHorizontal: metrics.small,
     padding: metrics.base,
     borderRadius: metrics.base,
-    backgroundColor: "gray",
+    backgroundColor: colors.lightestGray,
     flex: 1
   }
 });

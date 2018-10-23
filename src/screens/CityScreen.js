@@ -15,6 +15,7 @@ const HEADER_URL = {
 import places from "../../places.json";
 import activities from "../../activities.json";
 import feed from "../../feed.json";
+import { colors } from "../themes";
 
 export default class ProfileScreen extends PureComponent {
   static navigationOptions = {
@@ -28,7 +29,7 @@ export default class ProfileScreen extends PureComponent {
   };
 
   renderContent = () => (
-    <View>
+    <View style={{ backgroundColor: colors.lightGray }}>
       <Places places={places} />
       <Activities activities={activities} />
       <Feed feed={feed} />

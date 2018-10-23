@@ -18,6 +18,7 @@ export default ({ places }) => (
     <View style={style.spacer} />
     <FlatList
       data={places}
+      keyExtractor={item => item.id.toString()}
       renderItem={({ item }) => <Place place={item} />}
       numColumns={3}
     />
@@ -26,7 +27,8 @@ export default ({ places }) => (
 
 const style = StyleSheet.create({
   container: {
-    padding: metrics.double
+    padding: metrics.double,
+    backgroundColor: "white"
   },
   spacer: {
     height: metrics.base
