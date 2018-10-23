@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Entertainment",
+    "icon": "entertainment",
+    "image": "https://www.yicaiglobal.com/sites/default/files/news/2018/03/2.10%E4%B8%AD%E5%9B%BD%E5%8E%BB%E5%B9%B4%E6%B3%9B%E5%A8%B1%E4%B9%90%E4%BA%A7%E4%B8%9A%E4%BA%A7%E5%80%BC%E5%90%8C%E6%AF%94%E5%A2%9E%E9%95%BF32%25.jpg"
+  },
+  {
+    "name": "Events",
+    "icon": "event",
+    "image": "https://blog.inyourpocket.com/switzerland/wp-content/uploads/sites/10/2018/05/FOOBY-FOOD-ZURICH-2017-Party_%C2%A9David-Biedert_031-732x380.jpeg"
+  },
+  {
+    "name": "Restaurants",
+    "icon": "restaurant",
+    "image": "https://image.cleveland.com/home/cleve-media/width620/img/dining-guide/photo/cleveland-classic-restaurants-aldos-08779429b6afcb4a.jpg"
+  },
+  {
+    "name": "Breakfast",
+    "icon": "breakfast",
+    "image": "https://images.food52.com/XbQ74_RhBtTpnraQf-mSgn2l468=/753x502/7562ab71-9093-41e3-9534-6509501370ad--2018-0309_wholeflour-breakfast-cookie_3x2_rocky-luten_033.jpg"
+  },
+  {
+    "name": "Masajid",
+    "icon": "masajid",
+    "image": "http://ibadurrahman.in/wp-content/uploads/2015/08/dubai-ramadan-mosque.jpg"
+  },
+  {
+    "name": "Coffee Cup",
+    "icon": "coffee",
+    "image": "http://bigbendcoffeeroasters.com/wp-content/uploads/2018/09/iStock-157528129.jpg"
+  }
+]

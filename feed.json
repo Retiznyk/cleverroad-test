@@ -1,0 +1,36 @@
+[
+  {
+    "avatar": "https://happytovisit.com/glib/3/Burj-Khalifa-At-The-Top-Ticket-from-Dubai-8-13683.png",
+    "full_name": "Osama Alnajjar",
+    "place": "McDonalds",
+    "comment": "Very interesting things are happening now in Alothaim Mall.. Come Now !!!",
+    "likes": 234,
+    "answers": 11,
+    "date": "5h"
+  },
+  {
+    "avatar": "https://happytovisit.com/glib/3/Burj-Khalifa-At-The-Top-Ticket-from-Dubai-8-13683.png",
+    "full_name": "Omar Hammad",
+    "photo": "https://dta0yqvfnusiq.cloudfront.net/forge85944124/2018/05/party-5afeb203ba5c5.jpg",
+    "place": "McDonalds",
+    "comment": "Very interesting things are happening now in Alothaim Mall.. Come Now !!!",
+    "likes": 403,
+    "answers": 52,
+    "date": "2m",
+    "replies": [
+      {
+        "avatar": "https://happytovisit.com/glib/3/Burj-Khalifa-At-The-Top-Ticket-from-Dubai-8-13683.png",
+        "full_name": "John Doe",
+        "comment": "Yeeeeees come now .. it is so interesting!!! It will end soon"
+      }
+    ]
+  },
+  {
+    "avatar": "https://happytovisit.com/glib/3/Burj-Khalifa-At-The-Top-Ticket-from-Dubai-8-13683.png",
+    "full_name": "Osama Alnajjar",
+    "comment": "Very interesting things are happening now in Alothaim Mall.. Come Now !!!",
+    "likes": 234,
+    "answers": 11,
+    "date": "5h"
+  }
+]
