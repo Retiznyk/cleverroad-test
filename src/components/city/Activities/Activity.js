@@ -14,7 +14,10 @@ export default ({ activity, style: containerStyle }) => (
       />
       <View style={style.spacer} />
       <Text style={style.name}>{activity.name}</Text>
-      <Text style={style.tickets}>{activity.tickets} tickets remaining</Text>
+      <Text style={style.tickets}>
+        {activity.tickets} ticket
+        {activity.tickets === 1 ? "" : "s"} remaining
+      </Text>
     </View>
   </TouchableOpacity>
 );
