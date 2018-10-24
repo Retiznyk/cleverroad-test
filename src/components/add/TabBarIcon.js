@@ -5,7 +5,7 @@ import { colors } from "../../themes";
 
 export default () => (
   <View style={style.container}>
-    <Icon name="plus-circle" size={60} color={colors.primary} />
+    <Icon name="plus-circle" style={style.icon} />
   </View>
 );
 
@@ -16,5 +16,11 @@ const style = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "white"
+  },
+  icon: {
+    width: 60,
+    height: 60,
+    fontSize: 60,
+    color: colors.primary
   }
 });
