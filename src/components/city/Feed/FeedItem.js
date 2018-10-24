@@ -1,7 +1,6 @@
 import React from "react";
-import { Text, View, Image, FlatList, StyleSheet } from "react-native";
+import { Text, View, Image, StyleSheet } from "react-native";
 import { Avatar } from "react-native-elements";
-import SimpleLineIcons from "react-native-vector-icons/SimpleLineIcons";
 import Replies from "./Replies";
 
 import { metrics, colors } from "../../../themes";
