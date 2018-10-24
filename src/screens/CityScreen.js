@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import { View, Image, StyleSheet } from "react-native";
+import { View, Image, StyleSheet, Platform } from "react-native";
 import { Badge, Header } from "react-native-elements";
 
 import Places from "../components/city/Places";
@@ -18,6 +18,8 @@ import places from "../../places.json";
 import activities from "../../activities.json";
 import feed from "../../feed.json";
 import { colors } from "../themes";
+
+const HEADER_HEIGHT = Platform.OS === "ios" ? 90 : 50;
 
 export default class ProfileScreen extends PureComponent {
   static navigationOptions = {
@@ -42,7 +44,7 @@ export default class ProfileScreen extends PureComponent {
     <Header
       title="Dubai"
       backgroundColor="transparent"
-      outerContainerStyles={{ borderBottomWidth: 0, height: 90 }}
+      outerContainerStyles={{ borderBottomWidth: 0, height: HEADER_HEIGHT }}
       leftComponent={
         <View>
           <Badge
@@ -51,9 +53,6 @@ export default class ProfileScreen extends PureComponent {
               backgroundColor: "transparent",
               borderColor: "white",
               borderWidth: 1
-            }}
-            wrapperStyle={{
-              marginTop: 20
             }}
             textStyle={{ color: "white" }}
           />
@@ -82,7 +81,7 @@ export default class ProfileScreen extends PureComponent {
   render() {
     return (
       <ReactNativeParallaxHeader
-        headerMinHeight={90}
+        headerMinHeight={HEADER_HEIGHT}
         headerMaxHeight={170}
         extraScrollHeight={20}
         title={"Dubai"}
@@ -99,7 +98,7 @@ export default class ProfileScreen extends PureComponent {
 
 const style = StyleSheet.create({
   title: {
-    fontSize: 16,
+    fontSize: 24,
     fontWeight: "bold"
   }
 });

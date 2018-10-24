@@ -18,7 +18,7 @@ export default class AddScreen extends PureComponent {
     title: "",
     tabBarIcon: (
       <View style={style.plusIcon}>
-        <Icon name="plus-circle" size={75} color={colors.primary} />
+        <Icon name="plus-circle" size={60} color={colors.primary} />
       </View>
     )
   };
