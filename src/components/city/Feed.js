@@ -6,7 +6,7 @@ import { fonts, metrics, colors } from "../../themes";
 
 export default ({ feed }) => (
   <View style={style.container}>
-    <Text style={fonts.title}>People in your city</Text>
+    <Text style={style.title}>People in your city</Text>
     <FlatList
       data={feed}
       keyExtractor={item => item.id.toString()}
@@ -22,5 +22,9 @@ const style = StyleSheet.create({
   },
   item: {
     marginVertical: metrics.small
+  },
+  title: {
+    ...fonts.title,
+    marginBottom: metrics.base
   }
 });

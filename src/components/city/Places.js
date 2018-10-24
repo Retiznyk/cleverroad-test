@@ -27,7 +27,7 @@ export default ({ places }) => (
 
 const style = StyleSheet.create({
   container: {
-    padding: metrics.double,
+    padding: metrics.base,
     backgroundColor: "white"
   },
   spacer: {

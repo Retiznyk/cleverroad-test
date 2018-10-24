@@ -11,5 +11,11 @@ const sources = {
 };
 
 export default ({ name, size }) => {
-  return <Image source={sources[name]} style={{ height: size, width: size }} />;
+  return (
+    <Image
+      source={sources[name]}
+      resizeMode="contain"
+      style={{ height: size, width: size }}
+    />
+  );
 };
