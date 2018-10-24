@@ -1,11 +1,13 @@
 import React, { PureComponent } from "react";
-import { View, Image } from "react-native";
+import { View, Image, StyleSheet } from "react-native";
+import { Badge, Header } from "react-native-elements";
 
 import Places from "../components/city/Places";
 import Activities from "../components/city/Activities";
 import Feed from "../components/city/Feed";
 
 import ReactNativeParallaxHeader from "react-native-parallax-header";
+import Icon from "react-native-vector-icons/SimpleLineIcons";
 
 const HEADER_URL = {
   uri:
@@ -36,18 +38,68 @@ export default class ProfileScreen extends PureComponent {
     </View>
   );
 
+  renderNavbar = () => (
+    <Header
+      title="Dubai"
+      backgroundColor="transparent"
+      outerContainerStyles={{ borderBottomWidth: 0, height: 90 }}
+      leftComponent={
+        <View>
+          <Badge
+            value="Change City"
+            containerStyle={{
+              backgroundColor: "transparent",
+              borderColor: "white",
+              borderWidth: 1
+            }}
+            wrapperStyle={{
+              marginTop: 20
+            }}
+            textStyle={{ color: "white" }}
+          />
+        </View>
+      }
+      rightComponent={
+        <View style={{ flexDirection: "row" }}>
+          <Icon
+            name="map"
+            size={20}
+            color="white"
+            style={{ padding: 5, marginTop: 20 }}
+          />
+          <View style={{ width: 10 }} />
+          <Icon
+            name="magnifier"
+            size={20}
+            color="white"
+            style={{ padding: 5, marginTop: 20 }}
+          />
+        </View>
+      }
+    />
+  );
+
   render() {
     return (
       <ReactNativeParallaxHeader
-        headerMinHeight={80}
+        headerMinHeight={90}
         headerMaxHeight={170}
         extraScrollHeight={20}
         title={"Dubai"}
-        titleStyle={{ fontSize: 16 }}
+        titleStyle={style.title}
         backgroundImage={HEADER_URL}
         backgroundImageScale={1.2}
+        navbarColor={colors.primary}
+        renderNavBar={this.renderNavbar}
         renderContent={this.renderContent}
       />
     );
   }
 }
+
+const style = StyleSheet.create({
+  title: {
+    fontSize: 16,
+    fontWeight: "bold"
+  }
+});
