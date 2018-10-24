@@ -1,95 +1,49 @@
 import React, { PureComponent } from "react";
-import { View, Image, StyleSheet, Platform } from "react-native";
-import { Badge, Header } from "react-native-elements";
+import { View, StyleSheet } from "react-native";
 
 import Places from "../components/city/Places";
 import Activities from "../components/city/Activities";
 import Feed from "../components/city/Feed";
 
 import ReactNativeParallaxHeader from "react-native-parallax-header";
-import Icon from "react-native-vector-icons/SimpleLineIcons";
 
-const HEADER_URL = {
-  uri:
-    "https://happytovisit.com/glib/3/Burj-Khalifa-At-The-Top-Ticket-from-Dubai-8-13683.png"
-};
+import { colors, metrics } from "../themes";
+import Navbar from "../components/city/Navbar";
+import TabBarIcon from "../components/city/TabBarIcon";
 
 import places from "../../places.json";
 import activities from "../../activities.json";
 import feed from "../../feed.json";
-import { colors } from "../themes";
+import cities from "../../cities.json";
 
-const HEADER_HEIGHT = Platform.OS === "ios" ? 90 : 50;
+const [CITY] = cities;
 
 export default class ProfileScreen extends PureComponent {
   static navigationOptions = {
     title: "My City",
-    tabBarIcon: (
-      <Image
-        source={require("@resources/icons/cityIcnActive.png")}
-        style={{ height: 20, width: 20 }}
-      />
-    )
+    tabBarIcon: <TabBarIcon />
   };
 
   renderContent = () => (
-    <View style={{ backgroundColor: colors.lightGray }}>
+    <View style={style.container}>
       <Places places={places} />
       <Activities activities={activities} />
       <Feed feed={feed} />
     </View>
   );
 
-  renderNavbar = () => (
-    <Header
-      title="Dubai"
-      backgroundColor="transparent"
-      outerContainerStyles={{ borderBottomWidth: 0, height: HEADER_HEIGHT }}
-      leftComponent={
-        <View>
-          <Badge
-            value="Change City"
-            containerStyle={{
-              backgroundColor: "transparent",
-              borderColor: "white",
-              borderWidth: 1
-            }}
-            textStyle={{ color: "white" }}
-          />
-        </View>
-      }
-      rightComponent={
-        <View style={{ flexDirection: "row" }}>
-          <Icon
-            name="map"
-            size={20}
-            color="white"
-            style={{ padding: 5, marginTop: 20 }}
-          />
-          <View style={{ width: 10 }} />
-          <Icon
-            name="magnifier"
-            size={20}
-            color="white"
-            style={{ padding: 5, marginTop: 20 }}
-          />
-        </View>
-      }
-    />
-  );
-
   render() {
     return (
       <ReactNativeParallaxHeader
-        headerMinHeight={HEADER_HEIGHT}
+        headerMinHeight={metrics.headerHeight}
         headerMaxHeight={170}
         extraScrollHeight={20}
-        title={"Dubai"}
+        title={CITY.name}
         titleStyle={style.title}
-        backgroundImage={HEADER_URL}
+        backgroundImage={{ uri: CITY.image }}
         backgroundImageScale={1.2}
         navbarColor={colors.primary}
-        renderNavBar={this.renderNavbar}
+        renderNavBar={() => <Navbar />}
         renderContent={this.renderContent}
       />
     );
@@ -100,5 +54,8 @@ const style = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: "bold"
+  },
+  container: {
+    backgroundColor: colors.lightGray
   }
 });

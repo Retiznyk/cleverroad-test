@@ -3,7 +3,7 @@ import { View, Text, FlatList, StyleSheet } from "react-native";
 
 import Activity from "./Activity";
 
-import { fonts, metrics, colors } from "../../themes";
+import { fonts, metrics } from "../../../themes";
 
 export default ({ activities }) => (
   <View style={style.container}>

@@ -1,7 +1,7 @@
 import React from "react";
 import { TouchableOpacity, Text, View, Image, StyleSheet } from "react-native";
 import { Badge } from "react-native-elements";
-import { metrics, colors } from "../../themes";
+import { metrics, colors } from "../../../themes";
 
 export default ({ activity, style: containerStyle }) => (
   <TouchableOpacity style={[style.container, containerStyle]}>

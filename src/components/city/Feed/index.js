@@ -2,7 +2,7 @@ import React from "react";
 import { Text, FlatList, View, StyleSheet } from "react-native";
 
 import FeedItem from "./FeedItem";
-import { fonts, metrics, colors } from "../../themes";
+import { fonts, metrics } from "../../../themes";
 
 export default ({ feed }) => (
   <View style={style.container}>

@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { Avatar } from "react-native-elements";
-import { metrics, colors } from "../../themes";
+import { metrics, colors } from "../../../themes";
 
 export default ({ reply }) => (
   <View style={style.container}>

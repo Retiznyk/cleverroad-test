@@ -1,7 +1,7 @@
 import React from "react";
 import { TouchableOpacity, Text, View, Image, StyleSheet } from "react-native";
 import PlaceIcon from "./PlaceIcon";
-import { metrics } from "../../themes";
+import { metrics } from "../../../themes";
 
 export default ({ place }) => (
   <TouchableOpacity style={style.container}>

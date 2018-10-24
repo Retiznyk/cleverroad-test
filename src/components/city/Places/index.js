@@ -3,7 +3,7 @@ import { Text, View, FlatList, StyleSheet } from "react-native";
 import { Badge } from "react-native-elements";
 import Place from "./Place";
 
-import { fonts, metrics, colors } from "../../themes";
+import { fonts, metrics, colors } from "../../../themes";
 
 export default ({ places }) => (
   <View style={style.container}>
